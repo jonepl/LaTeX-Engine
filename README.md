@@ -21,7 +21,10 @@ Welcome to Resume Builder. Currently, this app only handles the Personalized LaT
     ```bash
     docker-compose up -d
     ```
-3. Upload your template file (template.tex) and class file (resume.cls) files to the [templates](./workspace/templates/) directory
+    **NOTE**: This will create a workspace directory within the directory you've cloned this repo to. You will be able to find all generate LaTeX files here.
+
+3. Upload your template file (*.tex) and class file (*.cls) to the [workplace/templates](./workspace/templates/) directory.
+
 4. open the container with
     ```bash
     docker exec -it resume_serivce bash
@@ -29,6 +32,6 @@ Welcome to Resume Builder. Currently, this app only handles the Personalized LaT
 
 3. run this command to create your resume
     ```bash
-    latexmk -pdf -output-directory=pdfs -cd templates/template.tex
+    latexmk -xelatex -output-directory=pdfs -cd templates/professional_cv/template.tex
     ```
-4. view resume from the [pdfs](./workspace/pdfs) directory
+4. view resume from the pdfs directory @ ./workspace/templates/example_resume/pdfs

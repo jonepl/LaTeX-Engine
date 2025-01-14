@@ -2,13 +2,12 @@ version: '3.8'
 
 services:
   latex:
-    image: blang/latex:ubuntu
-    container_name: resume_serivce
+    image: texlive/texlive:latest
+    container_name: resume_service
     volumes:
-      - ./workspace:/workspace # Map your local workspace to the container
+      - ./workspace:/workspace
     working_dir: /workspace
-    ports:
-      - "8080:8080" # Optional, if you want to serve LaTeX previews via a web server
     environment:
-      - TZ=America/New_York # Set your timezone
-    command: tail -f /dev/null # Keeps the container running
+      - TZ=America/New_York
+      - TEXMFHOME=/workspace/texmf
+    command: tail -f /dev/null

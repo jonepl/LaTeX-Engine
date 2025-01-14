@@ -1,2 +1,2 @@
 workspace/pdfs
-workspace/templates
+workspace/templates/**/pdfs
