@@ -4,7 +4,7 @@ Welcome to Resume Builder. Currently, this app only handles the Personalized LaT
 
 ## Design
 <p align="center">
- <img src="./docs/Resume-Builder.png" style="display: block; margin: 0 auto">
+ <img src="./docs/LaTeX-Engine.png" style="display: block; margin: 0 auto">
 </p>
 
 <br/>
@@ -32,6 +32,6 @@ Welcome to Resume Builder. Currently, this app only handles the Personalized LaT
 
 3. run this command to create your resume
     ```bash
-    latexmk -xelatex -output-directory=pdfs -cd templates/professional_cv/template.tex
+    docker exec -it latex_engine latexmk -xelatex -output-directory=pdfs -cd templates/professional_cv/template.tex
     ```
-4. view resume from the pdfs directory @ ./workspace/templates/example_resume/pdfs
+4. view resume from the pdfs directory `./workspace/templates/professional_cv/pdfs`
